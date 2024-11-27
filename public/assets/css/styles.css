@@ -1,0 +1,252 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #212121;
+  }
+  
+  header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e0e0e0;
+  }
+  
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+  
+  nav .mainMenu li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav .mainMenu li a:hover {
+    background: #03362e;
+    transform: scale(1.1);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #212121;
+    color: #e0e0e0;
+    font-size: 0.9em;
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 10%;
+  }
+  
+  .product {
+    text-align: center;
+    background-color: #212121;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .product p {
+    margin-top: 10px;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Carousel */
+  .carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-image {
+    min-width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Product Detail Page */
+  .product-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+    background-color: #121212;
+  }
+  
+  .product-container {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .product-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #e0e0e0;
+  }
+  
+  .product-description {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .product-price {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .add-to-cart {
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+  
+  /* Cart Page */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  .checkout-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #03362e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .checkout-button:hover {
+    background-color: #04493c;
+  }
+  
+  /* Forms */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form label {
+    font-size: 1em;
+  }
+  
+  form input, form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #03362e;
+    color: #fff;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #04493c;
+    transform: scale(1.05);
+  }
+  
+  /* Error Messages */
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
